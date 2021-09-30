@@ -40,7 +40,7 @@ select
 	# SALE MANAGER
     # MONTH
 	# TOTAL SALES
--- 	, cus.customerNumber
+ 	, cus.customerNumber
 		mana.employeeNumber as manager_id
         , mana.firstName
         , mana.jobTitle as manager_role
@@ -59,6 +59,6 @@ where mana.jobTitle like '%Sale%Manager%'
 group by mana.employeeNumber 
         , mana.firstName
         , mana.jobTitle 
-		, date_format(orderDate, '%Y-%m-%01')
+	, date_format(orderDate, '%Y-%m-%01')
     ;
 
